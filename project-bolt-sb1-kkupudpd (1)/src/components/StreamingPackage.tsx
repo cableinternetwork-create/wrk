@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Tv, CheckCircle, Smartphone, Monitor, Tablet } from 'lucide-react';
 import { Card } from './Card';
 import { Button } from './Button';
+import { ChannelListModal } from './ChannelListModal';
 
 export const StreamingPackage: React.FC = () => {
   const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const features = [
     'Thousands of Live Channels',
@@ -109,7 +111,7 @@ export const StreamingPackage: React.FC = () => {
                   variant="outline"
                   className="flex-1"
                   size="lg"
-                  onClick={() => navigate('/streaming')}
+                  onClick={() => setIsModalOpen(true)}
                 >
                   View Channel List
                 </Button>
@@ -121,6 +123,7 @@ export const StreamingPackage: React.FC = () => {
           </Card>
         </div>
       </div>
+      <ChannelListModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

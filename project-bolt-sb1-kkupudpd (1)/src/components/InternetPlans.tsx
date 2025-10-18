@@ -124,9 +124,15 @@ export const InternetPlans: React.FC = () => {
                 <Button
                   variant="primary"
                   className="w-full"
-                  onClick={() => navigate('/trial')}
+                  onClick={() => navigate('/internet-plans', { state: { plan: {
+                    name: plan.name,
+                    speed: '1 Gigabit',
+                    price: plan.price,
+                    duration: plan.duration,
+                    features: plan.features
+                  }}})}
                 >
-                  Get 1-Day Free Trial
+                  Get Started
                 </Button>
                 <p className="text-xs text-center text-neutral-500">
                   Accepts Crypto Payments

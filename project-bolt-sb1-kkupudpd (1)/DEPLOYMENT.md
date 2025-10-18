@@ -289,6 +289,29 @@ npm run build -- --report
 
 This generates a visual bundle size report.
 
+## Application Features
+
+### Recent Updates
+
+1. **Page Navigation**: All page transitions now scroll to the top for better UX
+2. **Internet Plans**: Plan cards now lead directly to checkout page (no trial signup)
+3. **Free Trial Page**: Upsell button navigates to full plan selection page showing all 4 internet plans
+4. **Checkout Forms**: Installation address section removed from all forms
+5. **Payment Methods**:
+   - Credit/Debit card option is disabled with "Coming Soon" banner
+   - Cryptocurrency is the active payment method
+6. **Channel List Modal**: IPTV channel list now displays in a modal popup instead of a separate page
+   - Includes Base, Ascend, and Peak packages
+   - Organized by channel number and name
+
+### Form Data Collection
+
+All forms collect data client-side and are ready for your backend integration:
+- Free trial signups → POST to `/api/trial-signup`
+- Internet plans → POST to `/api/internet-purchase`
+- Streaming packages → POST to `/api/streaming-purchase`
+- Bundle purchases → POST to `/api/bundle-purchase`
+
 ## Backend Integration
 
 Your frontend is configured to work with a separate backend API. Update these environment variables:
@@ -296,12 +319,6 @@ Your frontend is configured to work with a separate backend API. Update these en
 ```
 VITE_API_URL=https://your-backend-api.com
 ```
-
-All forms collect data client-side and are ready for your backend integration:
-- Free trial signups → POST to `/api/trial-signup`
-- Internet plans → POST to `/api/internet-purchase`
-- Streaming packages → POST to `/api/streaming-purchase`
-- Bundle purchases → POST to `/api/bundle-purchase`
 
 ## Troubleshooting
 

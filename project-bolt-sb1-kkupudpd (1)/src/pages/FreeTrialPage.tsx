@@ -128,7 +128,7 @@ export const FreeTrialPage: React.FC = () => {
 
           <div>
             <Card className="p-8 mb-6 bg-gradient-to-br from-primary-600 to-primary-700 text-white">
-              <h3 className="text-2xl font-bold mb-4">Skip the Trial - Save 40%!</h3>
+              <h3 className="text-2xl font-bold mb-4">Skip the Trial - Get 40% Off!</h3>
               <p className="text-lg mb-6 text-white/90">
                 Purchase any plan now and get an instant 40% discount on your first month.
               </p>

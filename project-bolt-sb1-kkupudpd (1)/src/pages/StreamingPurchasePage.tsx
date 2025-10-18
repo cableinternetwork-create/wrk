@@ -19,7 +19,7 @@ export const StreamingPurchasePage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    paymentMethod: 'card',
+    paymentMethod: 'crypto',
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -171,22 +171,24 @@ export const StreamingPurchasePage: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-neutral-900 mb-4">Payment Method</h3>
                   <div className="space-y-3">
-                    <label className="flex items-center gap-3 p-4 border-2 border-neutral-200 rounded-lg cursor-pointer hover:border-secondary-500 transition-colors">
+                    <label className="relative flex items-center gap-3 p-4 border-2 border-neutral-200 rounded-lg opacity-50 cursor-not-allowed">
                       <input
                         type="radio"
                         name="payment"
                         value="card"
-                        checked={formData.paymentMethod === 'card'}
-                        onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
+                        disabled
                         className="w-4 h-4 text-secondary-600"
                       />
-                      <CreditCard className="w-5 h-5 text-neutral-600" />
+                      <CreditCard className="w-5 h-5 text-neutral-400" />
                       <div className="flex-1">
-                        <span className="font-medium text-neutral-900">Credit/Debit Card</span>
-                        <p className="text-sm text-neutral-500">Visa, Mastercard, Amex</p>
+                        <span className="font-medium text-neutral-500">Credit/Debit Card</span>
+                        <p className="text-sm text-neutral-400">Visa, Mastercard, Amex</p>
                       </div>
+                      <span className="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                        Coming Soon
+                      </span>
                     </label>
-                    <label className="flex items-center gap-3 p-4 border-2 border-neutral-200 rounded-lg cursor-pointer hover:border-secondary-500 transition-colors">
+                    <label className="flex items-center gap-3 p-4 border-2 border-secondary-500 bg-secondary-50 rounded-lg cursor-pointer transition-colors">
                       <input
                         type="radio"
                         name="payment"

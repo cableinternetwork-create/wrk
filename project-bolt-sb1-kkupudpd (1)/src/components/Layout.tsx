@@ -1,9 +1,15 @@
-import React from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Wifi } from 'lucide-react';
 import { Footer } from './Footer';
 
 export const Layout: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-white border-b border-neutral-200 sticky top-0 z-50 shadow-sm">
