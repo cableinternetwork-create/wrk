@@ -35,7 +35,7 @@ const getRecommendation = (users: string, usage: string): PlanRecommendation | n
     return {
       name: '3-Day Plan',
       duration: '3 Days',
-      price: 'CAD 9.99',
+      price: 'JMD $200',
       speed: '1 Gigabit',
       features: ['Unlimited Data', 'Perfect for light usage', 'Social media included'],
       description: 'Ideal for single users with basic needs'
@@ -47,7 +47,7 @@ const getRecommendation = (users: string, usage: string): PlanRecommendation | n
       return {
         name: '7-Day Plan',
         duration: '7 Days',
-        price: 'CAD 19.99',
+        price: 'JMD $350',
         speed: '1 Gigabit',
         features: ['Unlimited Data', 'HD Streaming Ready', 'Low Latency Gaming'],
         description: 'Great for entertainment enthusiasts'
@@ -60,7 +60,7 @@ const getRecommendation = (users: string, usage: string): PlanRecommendation | n
       return {
         name: '14-Day Plan',
         duration: '14 Days',
-        price: 'CAD 34.99',
+        price: 'JMD $670',
         speed: '1 Gigabit',
         features: ['Unlimited Data', 'Multiple Device Support', 'Best Value'],
         description: 'Perfect for small families or roommates'
@@ -71,7 +71,7 @@ const getRecommendation = (users: string, usage: string): PlanRecommendation | n
   return {
     name: '30-Day Plan',
     duration: '30 Days',
-    price: 'CAD 59.99',
+    price: 'JMD $1,300',
     speed: '1 Gigabit',
     features: ['Unlimited Data', 'Maximum Flexibility', 'All Features Included'],
     description: 'Best for heavy users and large households'

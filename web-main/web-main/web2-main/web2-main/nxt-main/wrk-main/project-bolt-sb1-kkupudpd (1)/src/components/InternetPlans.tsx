@@ -8,7 +8,7 @@ const plans = [
   {
     name: '3-Day Plan',
     duration: '3 Days',
-    price: '$200',
+    price: 'JMD $200',
     popular: false,
     features: [
       'Unlimited Data',
@@ -21,7 +21,7 @@ const plans = [
   {
     name: '7-Day Plan',
     duration: '7 Days',
-    price: '$350',
+    price: 'JMD $350',
     popular: true,
     features: [
       'Unlimited Data',
@@ -34,7 +34,7 @@ const plans = [
   {
     name: '14-Day Plan',
     duration: '14 Days',
-    price: '$670',
+    price: 'JMD $670',
     popular: false,
     features: [
       'Unlimited Data',
@@ -47,7 +47,7 @@ const plans = [
   {
     name: '30-Day Plan',
     duration: '30 Days',
-    price: '$1,300',
+    price: 'JMD $1,300',
     popular: false,
     features: [
       'Unlimited Data',

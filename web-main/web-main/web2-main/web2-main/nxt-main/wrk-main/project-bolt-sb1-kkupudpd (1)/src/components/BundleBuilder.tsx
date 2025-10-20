@@ -6,13 +6,13 @@ import { Dropdown } from './Dropdown';
 import { Button } from './Button';
 
 const internetPlans = [
-  { value: '3day', label: '3-Day Internet', price: 9.99, duration: '3 Days' },
-  { value: '7day', label: '7-Day Internet', price: 19.99, duration: '7 Days' },
-  { value: '14day', label: '14-Day Internet', price: 34.99, duration: '14 Days' },
-  { value: '30day', label: '30-Day Internet', price: 59.99, duration: '30 Days' },
+  { value: '3day', label: '3-Day Internet', price: 200, duration: '3 Days' },
+  { value: '7day', label: '7-Day Internet', price: 350, duration: '7 Days' },
+  { value: '14day', label: '14-Day Internet', price: 670, duration: '14 Days' },
+  { value: '30day', label: '30-Day Internet', price: 1300, duration: '30 Days' },
 ];
 
-const STREAMING_PRICE = 29.99;
+const STREAMING_PRICE = 500;
 
 export const BundleBuilder: React.FC = () => {
   const navigate = useNavigate();
@@ -106,7 +106,7 @@ export const BundleBuilder: React.FC = () => {
                       <div className="flex items-center justify-between">
                         <div>
                           <div className="font-medium text-neutral-900">1-Month IPTV Streaming</div>
-                          <div className="text-sm text-neutral-600">CAD {STREAMING_PRICE.toFixed(2)}/month</div>
+                          <div className="text-sm text-neutral-600">JMD ${STREAMING_PRICE.toFixed(0)}/month</div>
                         </div>
                         <div className={`w-6 h-6 rounded border-2 flex items-center justify-center transition-all ${
                           includeStreaming
@@ -141,7 +141,7 @@ export const BundleBuilder: React.FC = () => {
                             <span className="text-sm text-neutral-700">{selectedPlan.label}</span>
                           </div>
                           <span className="text-sm font-semibold text-neutral-900">
-                            CAD {selectedPlan.price.toFixed(2)}
+                            JMD ${selectedPlan.price.toFixed(0)}
                           </span>
                         </div>
                       )}
@@ -152,7 +152,7 @@ export const BundleBuilder: React.FC = () => {
                             <span className="text-sm text-neutral-700">IPTV Streaming</span>
                           </div>
                           <span className="text-sm font-semibold text-neutral-900">
-                            CAD {STREAMING_PRICE.toFixed(2)}
+                            JMD ${STREAMING_PRICE.toFixed(0)}
                           </span>
                         </div>
                       )}
@@ -162,7 +162,7 @@ export const BundleBuilder: React.FC = () => {
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm text-primary-600 font-medium">Bundle Savings (10%)</span>
                         <span className="text-sm font-semibold text-primary-600">
-                          -CAD {savings.toFixed(2)}
+                          -JMD ${savings.toFixed(0)}
                         </span>
                       </div>
                     )}
@@ -172,11 +172,11 @@ export const BundleBuilder: React.FC = () => {
                       <div className="text-right">
                         {savings > 0 && (
                           <div className="text-sm text-neutral-500 line-through">
-                            CAD {totalPrice.toFixed(2)}
+                            JMD ${totalPrice.toFixed(0)}
                           </div>
                         )}
                         <div className="text-2xl font-bold text-primary-600">
-                          CAD {finalPrice.toFixed(2)}
+                          JMD ${finalPrice.toFixed(0)}
                         </div>
                       </div>
                     </div>
@@ -212,7 +212,7 @@ export const BundleBuilder: React.FC = () => {
             {savings > 0 && (
               <div className="mt-6 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-lg p-4 border border-primary-200">
                 <p className="text-center text-sm font-semibold text-primary-700">
-                  You're saving CAD {savings.toFixed(2)} with this bundle!
+                  You're saving JMD ${savings.toFixed(0)} with this bundle!
                 </p>
               </div>
             )}
